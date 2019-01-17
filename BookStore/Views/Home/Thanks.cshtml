@@ -1,0 +1,9 @@
+﻿@{ BookStore.Models.User user = (BookStore.Models.User)Session["User"]; }
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<div class="jumbotron">
+    <h1>Thank you @user.Name for purchase</h1>
+</div>
+

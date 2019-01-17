@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sign Up</h2>
+@ViewBag.Name
+<div class="row">
+    <form method="post" action="">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="Name" /></td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td><input type="text" name="Last_Name" /></td>
+            </tr>
+            <tr>
+                <td>Age: </td>
+                <td><input type="text" name="Age" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+

@@ -1,0 +1,31 @@
+﻿@{ BookStore.Models.User user = (BookStore.Models.User)Session["User"]; }
+@{
+    ViewBag.Title = "Buy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Buy</h2>
+
+@if (Session["User"] != null)
+{
+    <form method="post" action="/Home/Buy">
+        <input type="hidden" value="@ViewBag.BookId" name="Books_Id" ; />
+        <input type="hidden" value="@user.Id" name="Users_Id" />
+        <table>
+            <tr>
+                <td>
+                    <p>Book name - @ViewBag.Book.Name</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Are you sure?</p><input type="submit" value="Sure!" /> <a href="/Home/Index" class="btn btn-default">Cancel</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+}
+else
+{
+    @Html.ActionLink("Вы должны войти, чтобы совершать покупки", "SignUp", "User");
+}

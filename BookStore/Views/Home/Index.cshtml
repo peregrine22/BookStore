@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Book shop</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Welcome to my humble book shop</h2>
+        <p>
+            You can find finest books on every subject imaginable.
+            Just imagine what you can do with such power
+            of knowlage!
+            All you have to do is searvh your feelings.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Search", "Books", "Home")</h2>
+    </div>
+</div>
